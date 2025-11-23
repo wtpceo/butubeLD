@@ -1,10 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import EbookModal from "@/components/modals/EbookModal";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
+import { useState } from "react";
 
 export default function Hero() {
+    const [isEbookModalOpen, setIsEbookModalOpen] = useState(false);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
             {/* Background Gradient */}
@@ -38,12 +42,21 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Button size="lg" className="h-14 px-8 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full">
+                        <Button
+                            onClick={() => setIsEbookModalOpen(true)}
+                            size="lg"
+                            className="h-14 px-8 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full"
+                        >
                             부동산 마케팅 트랜드 2026 전자책 받기
                         </Button>
                     </div>
                 </motion.div>
             </div>
+
+            <EbookModal
+                isOpen={isEbookModalOpen}
+                onClose={() => setIsEbookModalOpen(false)}
+            />
         </section>
     );
 }

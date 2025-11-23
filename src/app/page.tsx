@@ -12,6 +12,7 @@ import Scarcity from "@/components/sections/Scarcity";
 import FinalCTA from "@/components/sections/FinalCTA";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import FloatingKakaoButton from "@/components/FloatingKakaoButton";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <FinalCTA />
       <FAQ />
       <Footer />
+      <FloatingKakaoButton />
     </main>
   );
 }

@@ -29,7 +29,9 @@ export default function LeadMagnet() {
                                         src="/images/ebook-cover.jpg"
                                         alt="Real Estate Content Bible"
                                         fill
+                                        sizes="(max-width: 768px) 300px, 400px"
                                         className="object-cover"
+                                        unoptimized
                                     />
                                     {/* Shine Effect */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />

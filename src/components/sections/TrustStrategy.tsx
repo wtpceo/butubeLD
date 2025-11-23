@@ -67,7 +67,9 @@ export default function TrustStrategy() {
                                     src="/images/trust-archive-mockup.png"
                                     alt="Trust Archive Mobile Mockup"
                                     fill
+                                    sizes="(max-width: 768px) 300px, 400px"
                                     className="object-cover"
+                                    unoptimized
                                 />
                             </div>
                         </div>
