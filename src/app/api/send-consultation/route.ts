@@ -2,10 +2,18 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-    // Initialize Resend with environment variable
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
     try {
+        const apiKey = process.env.RESEND_API_KEY;
+
+        if (!apiKey) {
+            console.error('RESEND_API_KEY is missing');
+            return NextResponse.json(
+                { error: '서버 설정 오류: API 키가 없습니다.' },
+                { status: 500 }
+            );
+        }
+
+        const resend = new Resend(apiKey);
         const body = await request.json();
         const { name, phone, inquiry } = body;
 
