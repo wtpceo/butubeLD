@@ -28,10 +28,10 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="md:text-right text-sm space-y-2">
-                        <p>대표: 김지훈 | 사업자등록번호: 668-81-00391</p>
+                        <p>대표: 김지훈 | 사업자등록번호: 668-81-00391 | 통신판매업신고: 1698-9120-7020-8511</p>
                         <p>주소: 서울시 금천구 디지털로 178 가산퍼블릭 A동 2518호 2519호</p>
                         <p>고객센터: 1670-0704 (운영시간: 오전 10:00 ~ 오후 6:00)</p>
-                        <p>이메일: contact@wiztheplanning.com</p>
+                        <p>이메일: wiz@wiztheplanning.com</p>
                     </div>
                 </div>
                 <div className="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
