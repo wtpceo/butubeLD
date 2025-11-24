@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 export default function FloatingKakaoButton() {
     return (
         <motion.a
-            href="#" // 실제 카카오톡 채널 URL로 변경 필요 (예: http://pf.kakao.com/_xxxxxx)
+            href="http://pf.kakao.com/_xcHvpn/chat"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0 }}
