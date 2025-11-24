@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = process.env.RESEND_API_KEY || process.env.Resend_api_key;
 
     if (!apiKey) {
         console.error("RESEND_API_KEY가 설정되지 않았습니다.");
