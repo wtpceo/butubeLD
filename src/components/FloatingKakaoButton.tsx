@@ -23,8 +23,8 @@ export default function FloatingKakaoButton() {
                 {/* Button */}
                 <div className="relative bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-full p-4 shadow-2xl transition-all duration-300 flex items-center space-x-3">
                     <MessageCircle className="w-7 h-7" />
-                    <span className="hidden group-hover:block font-bold text-sm pr-2 whitespace-nowrap">
-                        카카오톡 문의
+                    <span className="hidden group-hover:block font-bold text-xs pr-2 whitespace-nowrap">
+                        카톡으로 바로 상담하기
                     </span>
                 </div>
             </div>

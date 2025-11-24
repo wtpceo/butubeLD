@@ -31,7 +31,6 @@ export default function LeadMagnet() {
                                         fill
                                         sizes="(max-width: 768px) 300px, 400px"
                                         className="object-cover"
-                                        unoptimized
                                     />
                                     {/* Shine Effect */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
@@ -55,12 +54,12 @@ export default function LeadMagnet() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            부동산 콘텐츠 아이디어<br />
-                            <span className="text-yellow-500">40가지를 무료로 드립니다</span>
+                            위즈더플래닝의<br />
+                            <span className="text-yellow-500">마케팅 전략을 공개합니다</span>
                         </h2>
                         <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                            "무슨 영상을 찍어야 할지 모르겠어요."<br />
-                            더 이상 고민하지 마세요. 조회수가 보장된 검증된 주제들을 모았습니다.
+                            저희가 실제 고객사 채널을 성장시킨 노하우를 담았습니다.<br />
+                            대행을 맡기시기 전, 저희의 기획력을 먼저 확인해보세요.
                         </p>
 
                         <ul className="space-y-4 mb-10">

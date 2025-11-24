@@ -1,10 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import ConsultationModal from "@/components/modals/ConsultationModal";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 
 export default function ProcessHero() {
+    const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950">
             {/* Background Pattern */}
@@ -25,11 +29,11 @@ export default function ProcessHero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-8"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 mb-8"
                     >
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
                         </span>
                         <span className="text-sm font-medium">Premium Real Estate Marketing</span>
                     </motion.div>
@@ -37,7 +41,7 @@ export default function ProcessHero() {
                     {/* Main Heading */}
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight mb-8">
                         부동산 유튜브,<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
                             프로세스가 다릅니다
                         </span>
                     </h1>
@@ -58,7 +62,7 @@ export default function ProcessHero() {
                         ].map((stat, index) => (
                             <div key={index} className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                                <div className="text-sm font-medium text-blue-400 mb-1">{stat.label}</div>
+                                <div className="text-sm font-medium text-yellow-500 mb-1">{stat.label}</div>
                                 <div className="text-xs text-slate-500">{stat.desc}</div>
                             </div>
                         ))}
@@ -68,12 +72,13 @@ export default function ProcessHero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button
                             size="lg"
-                            className="h-16 px-8 text-lg bg-blue-600 hover:bg-blue-500 text-white rounded-full w-full sm:w-auto"
+                            className="h-16 px-8 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full w-full sm:w-auto"
                         >
                             프로세스 자세히 보기
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
                         <Button
+                            onClick={() => setIsConsultationModalOpen(true)}
                             size="lg"
                             variant="outline"
                             className="h-16 px-8 text-lg border-white/20 text-white hover:bg-white/10 rounded-full w-full sm:w-auto"
@@ -83,6 +88,11 @@ export default function ProcessHero() {
                     </div>
                 </motion.div>
             </div>
+
+            <ConsultationModal
+                isOpen={isConsultationModalOpen}
+                onClose={() => setIsConsultationModalOpen(false)}
+            />
         </section>
     );
 }

@@ -41,22 +41,22 @@ export default function Solutions() {
                                     <Star className="w-6 h-6 text-yellow-500" />
                                 </div>
                                 <CardTitle className="text-2xl text-white">Track A. 스타 중개사</CardTitle>
-                                <p className="text-slate-400">퍼스널 브랜딩에 집중하고 싶은 분</p>
+                                <p className="text-slate-400">퍼스널 브랜딩 올인원 패키지</p>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <ul className="space-y-3">
                                     <li className="flex items-start text-slate-300">
                                         <Camera className="w-5 h-5 mr-3 text-yellow-500 shrink-0" />
-                                        <span>전문적인 인터뷰 및 브이로그 촬영</span>
+                                        <span>전문 PD 방문 촬영 및 디렉팅</span>
                                     </li>
                                     <li className="flex items-start text-slate-300">
                                         <TrendingUp className="w-5 h-5 mr-3 text-yellow-500 shrink-0" />
-                                        <span>지역 내 인지도 급상승 전략</span>
+                                        <span>지역 1등 중개사 브랜딩 전략</span>
                                     </li>
                                 </ul>
                                 <div className="mt-6 p-4 bg-slate-950/50 rounded-lg border border-slate-800">
                                     <p className="text-sm text-slate-400">
-                                        "카메라 앞에서는 것이 두렵지 않고, 나 자신을 브랜드로 만들고 싶은 소장님께 추천합니다."
+                                        "소장님은 출연만 하세요. 기획, 촬영, 편집은 저희가 다 알아서 해드립니다."
                                     </p>
                                 </div>
                             </CardContent>
@@ -77,22 +77,22 @@ export default function Solutions() {
                                     <Mic className="w-6 h-6 text-blue-500" />
                                 </div>
                                 <CardTitle className="text-2xl text-white">Track B. 전문가 중개사</CardTitle>
-                                <p className="text-slate-400">얼굴 노출 없이 신뢰를 얻고 싶은 분</p>
+                                <p className="text-slate-400">비대면 전문 영상 제작 패키지</p>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <ul className="space-y-3">
                                     <li className="flex items-start text-slate-300">
                                         <Mic className="w-5 h-5 mr-3 text-blue-500 shrink-0" />
-                                        <span>고품격 보이스오버 & 자료 화면</span>
+                                        <span>고품격 보이스오버 & 자료 화면 제작</span>
                                     </li>
                                     <li className="flex items-start text-slate-300">
                                         <TrendingUp className="w-5 h-5 mr-3 text-blue-500 shrink-0" />
-                                        <span>시장 분석 및 정보 전달 중심</span>
+                                        <span>시장 분석 데이터 시각화 영상</span>
                                     </li>
                                 </ul>
                                 <div className="mt-6 p-4 bg-slate-950/50 rounded-lg border border-slate-800">
                                     <p className="text-sm text-slate-400">
-                                        "얼굴 노출은 부담스럽지만, 목소리와 전문 지식만으로 고객의 신뢰를 얻고 싶은 소장님께 추천합니다."
+                                        "얼굴 노출 없이도 신뢰를 얻을 수 있습니다. 전문적인 영상미로 승부합니다."
                                     </p>
                                 </div>
                             </CardContent>

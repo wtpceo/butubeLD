@@ -1,10 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import ConsultationModal from "@/components/modals/ConsultationModal";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import { useState } from "react";
 
 export default function ProcessCTA() {
+    const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
     return (
         <section className="py-32 bg-slate-900 relative overflow-hidden">
             {/* Background Elements */}
@@ -21,7 +25,7 @@ export default function ProcessCTA() {
                 >
                     <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                         이제 시작할<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
                             준비가 되셨나요?
                         </span>
                     </h2>
@@ -33,8 +37,9 @@ export default function ProcessCTA() {
 
                     <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button
+                            onClick={() => setIsConsultationModalOpen(true)}
                             size="lg"
-                            className="h-16 px-10 text-lg bg-blue-600 hover:bg-blue-500 text-white rounded-full w-full sm:w-auto shadow-lg shadow-blue-900/20"
+                            className="h-16 px-10 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full w-full sm:w-auto shadow-lg shadow-yellow-900/20"
                         >
                             무료 상담 신청하기
                             <ArrowRight className="ml-2 w-5 h-5" />
@@ -50,16 +55,21 @@ export default function ProcessCTA() {
 
                     <div className="pt-12 flex flex-col md:flex-row items-center justify-center gap-8 text-slate-400">
                         <div className="flex items-center gap-3 bg-slate-800/50 px-6 py-3 rounded-full border border-slate-700">
-                            <Phone className="w-5 h-5 text-blue-400" />
+                            <Phone className="w-5 h-5 text-yellow-500" />
                             <span className="font-medium">1670-0704</span>
                         </div>
                         <div className="flex items-center gap-3 bg-slate-800/50 px-6 py-3 rounded-full border border-slate-700">
-                            <Mail className="w-5 h-5 text-purple-400" />
+                            <Mail className="w-5 h-5 text-orange-400" />
                             <span className="font-medium">wiz@wiztheplanning.com</span>
                         </div>
                     </div>
                 </motion.div>
             </div>
+
+            <ConsultationModal
+                isOpen={isConsultationModalOpen}
+                onClose={() => setIsConsultationModalOpen(false)}
+            />
         </section>
     );
 }

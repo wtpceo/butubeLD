@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import EbookModal from "@/components/modals/EbookModal";
+import ConsultationModal from "@/components/modals/ConsultationModal";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useState } from "react";
@@ -45,15 +45,16 @@ export default function Hero() {
                         <Button
                             onClick={() => setIsEbookModalOpen(true)}
                             size="lg"
-                            className="h-14 px-8 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full"
+                            className="h-14 px-8 text-lg bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-full shadow-lg shadow-yellow-500/20"
                         >
-                            부동산 마케팅 트랜드 2026 전자책 받기
+                            무료 상담 신청하기
+                            <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
                     </div>
                 </motion.div>
             </div>
 
-            <EbookModal
+            <ConsultationModal
                 isOpen={isEbookModalOpen}
                 onClose={() => setIsEbookModalOpen(false)}
             />

@@ -14,10 +14,13 @@ import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
 import FloatingKakaoButton from "@/components/FloatingKakaoButton";
 
+import AgencyPartner from "@/components/sections/AgencyPartner";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Hero />
+      <AgencyPartner />
       <PainPoints />
       <TrustStrategy />
       <Solutions />
