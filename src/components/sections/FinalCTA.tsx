@@ -82,7 +82,7 @@ export default function FinalCTA() {
                                             <label className="text-sm font-medium text-slate-700 ml-1">성함</label>
                                             <Input
                                                 placeholder="홍길동"
-                                                className="bg-slate-50 border-slate-200 h-12"
+                                                className="bg-slate-50 border-slate-200 h-12 text-slate-900"
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
                                                 required
@@ -92,7 +92,7 @@ export default function FinalCTA() {
                                             <label className="text-sm font-medium text-slate-700 ml-1">연락처</label>
                                             <Input
                                                 placeholder="010-0000-0000"
-                                                className="bg-slate-50 border-slate-200 h-12"
+                                                className="bg-slate-50 border-slate-200 h-12 text-slate-900"
                                                 value={phone}
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 required
@@ -103,7 +103,7 @@ export default function FinalCTA() {
                                         <label className="text-sm font-medium text-slate-700 ml-1">지역</label>
                                         <Input
                                             placeholder="예: 서울시 강남구 역삼동"
-                                            className="bg-slate-50 border-slate-200 h-12"
+                                            className="bg-slate-50 border-slate-200 h-12 text-slate-900"
                                             value={region}
                                             onChange={(e) => setRegion(e.target.value)}
                                         />
