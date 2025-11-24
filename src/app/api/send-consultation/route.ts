@@ -1,11 +1,10 @@
-```typescript
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
     try {
         const apiKey = process.env.RESEND_API_KEY || process.env.Resend_api_key;
-        
+
         if (!apiKey) {
             console.error('RESEND_API_KEY is missing');
             return NextResponse.json(
@@ -28,14 +27,14 @@ export async function POST(request: Request) {
         const { data, error } = await resend.emails.send({
             from: '위즈더플래닝 <onboarding@resend.dev>',
             to: ['ceo@wiztheplanning.com'],
-            subject: `[상담신청] ${ name }님의 부동산 유튜브 상담 문의`,
+            subject: `[상담신청] ${name}님의 부동산 유튜브 상담 문의`,
             html: `
-    < h1 > 새로운 상담 신청이 접수되었습니다.</h1>
-        < p > <strong>이름 / 부동산명: </strong> ${name}</p >
-            <p><strong>연락처: </strong> ${phone}</p >
-                <p><strong>문의 내용: </strong></p >
-                    <p>${ inquiry || '내용 없음' } </p>
-                        `,
+                <h1>새로운 상담 신청이 접수되었습니다.</h1>
+                <p><strong>이름/부동산명:</strong> ${name}</p>
+                <p><strong>연락처:</strong> ${phone}</p>
+                <p><strong>문의 내용:</strong></p>
+                <p>${inquiry || '내용 없음'}</p>
+            `,
         });
 
         if (error) {
